@@ -1,0 +1,23 @@
+.scope-list {
+    display: flex;
+    margin-top: 50px;
+}
+
+.scope-list .scope-list__item {
+    width: 370px;
+    margin-right: 30px;
+}
+
+.scope-list .scope-list__item:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.scope-list__item {
+    position: relative;
+}
+
+.scope-list__name {
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+}

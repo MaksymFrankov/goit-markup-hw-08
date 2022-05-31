@@ -1,203 +1,169 @@
-.footer {
-    background-color: var(--hero-bg-color);
+.information {
+    background-color: $second-background-color;
     padding-top: 60px;
     padding-bottom: 60px;
+
+    & .container {
+        @media screen and (max-width: 767.98px) {
+            display: block;
+        }
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
+
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        align-items: baseline;
+    }
 }
 
-.footer-box {
-    display: flex;
-    align-items: baseline;
+.container-adress {
+    text-align: center;
+
+    @include desktop {
+        text-align: start;
+    }
 }
 
-.logo__footer {
-    color: var(--white);
-    margin: 0px;
-    padding: 0;
-}
-
-.footer__item:not(:last-child) {
-    margin-bottom: 9px;
-}
-
-.footer-invite-form {
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    margin-left: 70px;
-}
-
-.footer-invite-form__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-align: left;
-    text-transform: uppercase;
-    color: var(--white);
+.footer__logo {
+    cursor: pointer;
+    display: block;
     margin-bottom: 20px;
+    color: $other-text-color;
+    font-family: "Raleway", sans-serif;
+    @include font(26px, 700, 1.19, 0.03em);
 }
 
-.footer-social-links-list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-.footer-social-item-list {
-    width: 44px;
-    height: 44px;
-}
-
-.footer-social-item-list+.footer-social-item-list {
-    margin-left: 10px;
-}
-
-.footer-social-item-list__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
-}
-
-.footer-social-item-list__link:hover,
-.footer-social-item-list__link:focus {
-    background-color: var(--secondary-color);
-}
-
-.footer-social-item-list__icon {
-    fill: var(--white);
-}
-
-.contact-list {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    display: flex;
-
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-
-    color: var(--gray);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact-list:hover,
-.contact-list:focus {
-    color: var(--secondary-color);
-}
-
-.address {
+.informations-list__address {
     margin-top: 20px;
-}
-
-.adds {
+    color: $other-text-color;
     font-style: normal;
-    font-size: 14px;
-    color: var(--white);
-    text-decoration: none;
+
+    @extend %link;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--accent:hover {
+        color: $accent-text-color;
+    }
+
+    &--accent:focus {
+        color: $accent-text-color;
+    }
 }
 
-.adds:focus,
-.adds:hover {
-    color: var(--secondary-color);
-}
-
-.footer-contact {
-    padding: 0;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-
-    letter-spacing: 0.03em;
-}
-
-.footer-list .item:not(:first-child) {
+.informations-list__available:not(:first-child) {
     margin-top: 9px;
 }
 
-.footer-form {
-    list-style-type: none;
+.informations-list__number {
+    display: block;
+    color: $others-text-color;
     font-style: normal;
-    margin-left: auto;
+
+    @extend %link;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--accent:hover {
+        color: $accent-text-color;
+    }
+
+    &--accent:focus {
+        color: $accent-text-color;
+    }
+}
+
+.informations-list__mail {
+    display: block;
+    color: $others-text-color;
+    font-style: normal;
+
+    @extend %link;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--accent:hover {
+        color: $accent-text-color;
+    }
+
+    &--accent:focus {
+        color: $accent-text-color;
+    }
+}
+
+.join {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+
+    @extend %list;
+
+    &__icon {
+        fill: currentColor;
+    }
+
+    &__title {
+        @include font(14px, 700, 1.14, 0.03em);
+        text-transform: uppercase;
+        color: $other-text-color;
+    }
+}
+
+.join__list {
+    display: flex;
+
+    &+& {
+        margin-left: 10px;
+    }
+}
+
+.join__link {
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.footer-form-header {
-    justify-content: left;
-}
-
-.footer-input {
-    margin: 0;
-    padding: 15px 15px 16px;
-    font-family: 'Roboto';
-    font-style: normal;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-
-    min-width: 358px;
-    min-height: 50px;
-    align-items: center;
-    letter-spacing: 0.03em;
-    background-color: var(--hero-bg-color);
-    color: var(--white);
-
-}
-
-.footer-input::placeholder {
-    color: var(--gray);
-}
-
-.footer-button {
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
+    @include size(44px, 44px);
+    border-radius: 50%;
+    background-color: $bcg-footer-icon;
     cursor: pointer;
-    margin-left: 12px;
-    justify-content: center;
-    min-width: 200px;
-    min-height: 50px;
+    color: $background-color;
 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    background-color: #2196F3;
-    color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 28px;
-    padding-right: 48px;
-    border-radius: 4px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 30px;
-    border: 1px solid #2196F3;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        background-color: $accent-text-color;
+    }
 }
 
-.footer-button-icon {
-    fill: currentColor;
-    margin-left: 10px;
+.mailinglist {
+    @media screen and (max-width: 1199.98px) {
+        display: block;
+    }
+
+    @media screen and (min-width: 768) and (max-width: 1199.98px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__icon {
+        margin-left: 10px;
+    }
+
+    &__title {
+        @include font($font-size, 700, $line-height, $letter-spacing);
+        align-items: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: $background-color;
+    }
 }
 
-.footer-button:hover,
-.footer-button:focus {
-    background-color: var(--hover-color);
-    color: var(--white);
+.informations-list {
+    @extend %list;
 }

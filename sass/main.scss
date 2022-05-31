@@ -1,21 +1,36 @@
-@import './utils/variables';
-@import './base/reset';
-@import './base/container';
-@import './base/section';
+@import "./utils/variable";
+@import "./utils/visually-hidden";
+@import "./utils/placeholders";
+@import "./utils/mixins";
 
-@import './components/secondary-header';
-@import './components/logo';
+// ------------BASE------------
+@import "./base/start";
+@import "./base/reset";
 
-@import './utils/hidden';
+// ----------------------BUTTONS-----------
 
+@import "./components/primary-btn";
+@import "./components/button-portfolio";
+@import "./components/button-footer";
+@import "./components/moddal-button";
+@import "./components/modal_submit";
 
-@import './layout/header';
-@import './layout/hero';
-@import './layout/features';
-@import './layout/work';
-@import './layout/team';
-@import './layout/client';
-@import './layout/footer';
+// ----------------------COMPONENTS-----------
 
-@import './portfolio/portfolio';
-@import './components/modal';
+@import "./components/container";
+@import "./components/section";
+@import "./components/title-sections-three-for";
+@import "./components/container-footer";
+@import "./components/modal";
+@import "./components/backdrop";
+
+// ----------------------LAYOUT-----------
+
+@import "./layout/header";
+@import "./layout/demo";
+@import "./layout/benefits";
+@import "./layout/products";
+@import "./layout/about";
+@import "./layout/clients";
+@import "./layout/portfolio";
+@import "./layout/footer";

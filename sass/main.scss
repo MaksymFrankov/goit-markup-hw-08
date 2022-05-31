@@ -1,11 +1,12 @@
-@import "./utils/variable";
-@import "./utils/visually-hidden";
+@import "./utils/variables";
+@import "./utils/hidden";
 @import "./utils/placeholders";
 @import "./utils/mixins";
 
 // ------------BASE------------
-@import "./base/start";
 @import "./base/reset";
+@import "./base/container";
+@import "./base/section";
 
 // ----------------------BUTTONS-----------
 
@@ -17,8 +18,6 @@
 
 // ----------------------COMPONENTS-----------
 
-@import "./components/container";
-@import "./components/section";
 @import "./components/title-sections-three-for";
 @import "./components/container-footer";
 @import "./components/modal";

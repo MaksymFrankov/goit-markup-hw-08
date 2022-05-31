@@ -1,7 +1,48 @@
 .container {
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    // display: flex;
+
+    @media screen and (min-width: 1px) {
+        &--display {
+            display: block;
+        }
+    }
+
+    @include mobile-mini {
+        width: 320px;
+    }
+
+    @include mobile {
+        width: 468px;
+    }
+
+    @include tablet {
+        width: 768px;
+    }
+
+    @include desktop {
+        width: 1200px;
+    }
+}
+
+.header .container {
+    display: flex;
+}
+
+.mob-menu__container {
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+    overflow: auto;
+    height: 100%;
+    max-width: 480px;
+    margin-right: auto;
+    margin-left: auto;
 }

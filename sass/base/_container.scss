@@ -17,7 +17,7 @@
     }
 
     @include mobile {
-        width: 468px;
+        width: 480px;
     }
 
     @include tablet {
@@ -42,7 +42,7 @@
     justify-content: space-between;
     overflow: auto;
     height: 100%;
-    max-width: 480px;
+    min-width: 480px;
     margin-right: auto;
     margin-left: auto;
 }

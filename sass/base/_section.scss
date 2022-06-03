@@ -1,9 +1,0 @@
-.section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-
-    @include desktop {
-        padding-top: $padding-top;
-        padding-bottom: $padding-bottom;
-    }
-}

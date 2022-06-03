@@ -1,35 +1,21 @@
-@import "./utils/variables";
-@import "./utils/hidden";
-@import "./utils/placeholders";
-@import "./utils/mixins";
-
-// ------------BASE------------
-@import "./base/reset";
-@import "./base/container";
-@import "./base/section";
-
-// ----------------------BUTTONS-----------
-
-@import "./components/primary-btn";
-@import "./components/button-portfolio";
-@import "./components/button-footer";
-@import "./components/moddal-button";
-@import "./components/modal_submit";
-
-// ----------------------COMPONENTS-----------
-
-@import "./components/title-sections-three-for";
-@import "./components/container-footer";
-@import "./components/modal";
-@import "./components/backdrop";
-
-// ----------------------LAYOUT-----------
-
-@import "./layout/header";
-@import "./layout/demo";
-@import "./layout/benefits";
-@import "./layout/products";
-@import "./layout/about";
-@import "./layout/clients";
-@import "./layout/portfolio";
-@import "./layout/footer";
+@import './base/reset';
+@import './base/common';
+@import './utils/vars';
+@import './utils/hidden';
+@import './utils/placeholders';
+@import './utils/mixins';
+//////////////////////////////////
+@import './components/title';
+@import './components/container';
+@import './components/btn';
+@import './components/modal';
+//////////////////////////////////
+@import './components/header';
+@import './components/mobile-menu';
+@import './components/hero';
+@import './components/benef';
+@import './components/wwdo';
+@import './components/team';
+@import './components/clients';
+@import './components/footer';
+@import './components/portfolio';
